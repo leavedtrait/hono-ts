@@ -2,6 +2,7 @@ FROM oven/bun:latest
 
 WORKDIR /Hono-app
 
+COPY src ./src
 COPY package.json ./
 COPY bun.lockb ./
 
