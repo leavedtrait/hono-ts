@@ -1,0 +1,8 @@
+# deps
+node_modules/
+
+# env file
+.env
+
+#app binary
+app
