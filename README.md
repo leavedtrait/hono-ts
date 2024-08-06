@@ -30,24 +30,14 @@ this maps the containers port to your machine
 docker compose up -d    
 ```
 open http://localhost:3000
-# To stop the docker container run :
+
+# To stop the docker services run :
 ```sh
  docker compose down 
 ```
-alternatively 
+alternatively stop each service by running :
 ```sh
- docker ps   
+ docker stop  Hono-app
+ docker stop  Hono-postgress-instance
 ```
-This outpts info such as:
-# CONTAINER ID   IMAGE               COMMAND                  CREATED        STATUS        PORTS                    NAMES
-
-copy the container id and run:
-```sh
- docker kill <YOUR CONTAINER ID>   
-```
-alternatively 
-```sh
- docker stop <YOUR CONTAINER ID>   
-```
-
 
