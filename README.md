@@ -27,8 +27,15 @@ TL:DR --sets up a postgress dev container and start a container for the app
 # To start the docker services:
 this maps the containers port to your machine 
 ```sh
+docker compose up    
+```
+alternatively run 
+
+```sh
 docker compose up -d    
 ```
+to start the services quietly
+
 open http://localhost:3000
 
 # To stop the docker services run :
