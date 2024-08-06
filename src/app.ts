@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Context, Hono } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 import { generateState } from "oslo/oauth2";
@@ -7,6 +8,17 @@ import { sign } from "hono/jwt";
 import { poweredBy } from "hono/powered-by";
 import { logger } from "hono/logger";
 import { getGoogleUser, googleOAuth2Client } from "./auth";
+=======
+import { type Context, Hono } from 'hono'
+
+import { poweredBy } from 'hono/powered-by'
+import { logger } from 'hono/logger'
+import { authRoute } from './auth/auth';
+
+export const app = new Hono()
+
+const apiRoutes = app.basePath("/auth").route("/", authRoute)
+>>>>>>> origin/main
 
 
 const app = new Hono();
@@ -15,6 +27,7 @@ app.use(poweredBy());
 
 app.use(logger());
 
+<<<<<<< HEAD
 // app.use('/auth/*', (c:Context, next) => {
 //   const jwtMiddleware = jwt({
 //     secret: `${Bun.env.JWT_SECRET}`,
@@ -94,3 +107,8 @@ app.get("/auth/google/callback", async (c: Context) => {
 });
 
 export default app;
+=======
+app.get('/', (c: Context) => {
+  return c.text('Hello Hono!')
+})
+>>>>>>> origin/main
