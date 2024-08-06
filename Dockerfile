@@ -5,7 +5,7 @@ WORKDIR /Hono-app
 COPY src ./src
 COPY package.json ./
 COPY bun.lockb ./
-
+RUN bun install
 RUN bun install && bun run build
 
 COPY . .
