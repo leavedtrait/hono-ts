@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "bun run --hot src/app.ts",
     "build":"bun build src/app.ts --compile --outfile app",
-    "start": "bun run build && ./app"
+    "start": "bun install && bun run build && ./app"
   },
   "dependencies": {
     "hono": "^4.5.3",
