@@ -6,14 +6,13 @@ COPY src ./src
 COPY package.json ./
 COPY bun.lockb ./
 
-RUN bun install
-RUN bun run build
+RUN bun install && bun run build
 
 COPY . .
 
 EXPOSE 3000
 
-CMD [ "/Hono-app/app" ]
+CMD ["bun", "run", "start"]
 
 
 

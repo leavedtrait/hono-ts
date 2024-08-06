@@ -18,16 +18,20 @@ open http://localhost:3000
 
 # To build the docker image :
 ```sh
- docker build -t "hono-bun" .   
+ docker-compose build     
 ```
 
 # To run the docker container:
 this maps the containers port to your machine 
-open http://localhost:3000
 ```sh
-docker run -p 3000:3000 hono-bun   
+docker compose up -d    
 ```
+open http://localhost:3000
 # To stop the docker container run :
+```sh
+ docker compose down 
+```
+alternatively 
 ```sh
  docker ps   
 ```

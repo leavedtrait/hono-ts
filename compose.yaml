@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: Hono-postgress-instance
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: hono-app
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: dev-db
+    restart: unless-stopped
+  
+  hono-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Hono-app
+    working_dir: /Hono-app
+    volumes:
+      - ./src:/Hono-app/src
+      - ./package.json:/Hono-app/package.json
+      - ./bun.lockb:/Hono-app/bun.lockb
+      - ./:/Hono-app  
+    ports:
+      - "3000:3000"
+    command: ["bun", "run", "start"]  
+    restart: unless-stopped  
+      
