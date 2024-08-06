@@ -39,7 +39,7 @@ alternatively
  docker ps   
 ```
 This outpts info such as:
-CONTAINER ID   IMAGE               COMMAND                  CREATED        STATUS        PORTS                    NAMES
+# CONTAINER ID   IMAGE               COMMAND                  CREATED        STATUS        PORTS                    NAMES
 
 copy the container id and run:
 ```sh
