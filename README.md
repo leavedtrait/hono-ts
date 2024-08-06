@@ -10,18 +10,21 @@ bun run dev
 
 # To run a production build :
 ```sh
-bun run build && ./app
+bun run start
 ```
 bun complies all javascript files and outputs a single binary with buns runtime
 
 open http://localhost:3000
 
-# To build the docker image :
+# Docker
+TL:DR --sets up a postgress dev container and start a container for the app
+
+# To build the docker services :
 ```sh
- docker-compose build     
+ docker compose build     
 ```
 
-# To run the docker container:
+# To start the docker services:
 this maps the containers port to your machine 
 ```sh
 docker compose up -d    
